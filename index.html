@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>PV CSV 2 HTML</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+<link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<head>
+      <meta name="viewport" charset="UTF-8" content="width=device-width, initial-scale=1.0">
+      <title>PV CSV2HTML</title>
+   <body>
+      <!-- Add Div Classes -->
+      <div class="container-fluid">
+      <!--div class="container"  shrinks container-->
+      <div>
+      <div class="header">
+         <h2>PV CSV to HTML table</h2>
+      </div>
+      <div class="col-3 menu">
+         <ul>
+            <li type="button" id="upload"><i class="fa fa-cc-visa" style="font-size:25px;color:#F4CA12;"></i>  Upload Section</li>
+            <li type="button" onclick="utcDate()"><i class="fa fa-clock-o" style="font-size:25px;color:#F4CA12"></i>  Display UTC TIME.</button></li>
+            <li><a href="https://www.nhl.com/" target="_blank"><i class="fa fa-hand-lizard-o" style="font-size:25px;color:#F4CA12"></i>  NHL.com</a></li>
+            <p id="utc"></p>
+         </ul>
+      </div>
+      <div class ="col-6">
+         <div>
+            Set Delimiter: <input type="text" class="my-css" value="," id="myDelim" oninput="getDelim(); set_background">
+            <p>Del set to</p>
+            <p id="Printdelim"></p>
+         </div>
+         <h4><span class="glyphicon glyphicon-search"></span> search</h4>
+         <br>
+         <!-- <h4 class="DelimWarning"<b>MUST make change to data box for delimter to take effect.<i>CLICK HERE TO CLOSE THIS MESSAGE</i></b></h4> -->
+         <div class="alert alert-danger alert-dismissible">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>INFO</strong> MUST make change to data box for delimter to take effect. Click 'X' to Close.
+         </div>
+         <input class="form-control" id="myInput" onclick="csvToHtml" type="text" placeholder="Search Table.."><br>
+         <table class="table table-hover table-bordered table-striped" width=80%>
+         <thead>
+            <tr class="grab">
+               <div class="row">
+                  <div class="col-md-12">
+                     <textarea cols="30" rows="10" class="source"  placeholder="Column1, column2, column3" data-toggle="tooltip" title="Input Data"></textarea>
+                  </div>
+                  <div class="col-md-12">
+                     <div class="output"></div>
+                  </div>
+               </div>
+      </div>
+      <button data-toggle="tooltip" title="Click To Export" onclick="exportTableToCSV('pvExportedResults.csv')">Export HTML Table To CSV File</button>
+      <div class="footer">
+      <p>Resize the browser window to resize. Евге́ний Ма́лкин</p>
+      </div>
+      <div></div>
+   </body>
+</html>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+<script  src="./script.js"></script>
+
+</body>
+</html>
